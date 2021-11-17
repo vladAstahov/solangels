@@ -649,6 +649,10 @@
 }
 
 @media screen and (max-height: 800px) {
+    .menu {
+        padding-top: 2%;
+    }
+
     .menu .left_part {
         width: 90%;
     }
@@ -659,6 +663,10 @@
 
     .menu .right_part {
         width: 20%;
+    }
+
+    .first_com_section {
+        margin-top: 40px;
     }
 
     .menu a {
