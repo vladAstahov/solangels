@@ -68,6 +68,10 @@
     margin: 0;
 }
 
+.without_header {
+    margin-top: 50px!important;
+}
+
 .hiden {
     display: none!important;
 }
@@ -525,7 +529,7 @@
 }
 
 .main_ask_shape p {
-    font-size: 36px;
+    font-size: 23px;
     line-height: 48px;
     font-weight: 500;
     font-family: "JetBrainsMono_light";
