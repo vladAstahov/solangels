@@ -653,6 +653,11 @@
 }
 
 @media screen and (max-height: 800px) {
+
+    .without_header {
+        margin-top: 30px!important;
+    }
+
     .menu {
         padding-top: 2%;
     }
