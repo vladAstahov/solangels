@@ -19,7 +19,26 @@
     font-style: normal;
 }
 
-
+@keyframes animated_question {
+    10% {
+        transform: rotate(45deg);
+    }
+    20% {
+        transform: rotate(-45deg);
+    }
+    30% {
+        transform: rotate(45deg);
+    }
+    40% {
+        transform: rotate(-45deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
 
 @keyframes second_slide_light_stars {
     50% {
@@ -539,6 +558,7 @@
     margin-top: 60px;
     margin-left: 20px;
     width: 80px;
+    animation: animated_question 2s linear infinite;
 }
 
 .question img {
