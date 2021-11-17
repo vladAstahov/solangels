@@ -1,0 +1,14 @@
+{
+  "name": "sol_angels",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "ProgWay",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
