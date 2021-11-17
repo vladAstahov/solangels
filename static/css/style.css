@@ -653,6 +653,10 @@
         width: 90%;
     }
 
+    .header_slide {
+        margin-top: 40px;
+    }
+
     .menu .right_part {
         width: 20%;
     }

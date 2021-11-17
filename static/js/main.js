@@ -1,7 +1,7 @@
 function check_mt(img) {
-    if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 120 && window.screen.width > 1280) {
+    if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 120 && window.screen.height > 800) {
         img.parentNode.parentNode.querySelector(".main_ask_shape").style.height = `120px`
-    } else if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 80 && window.screen.width <= 1280) {
+    } else if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 80 && window.screen.height <= 800) {
         img.parentNode.parentNode.querySelector(".main_ask_shape").style.height = `80px`
     }
     var padding = (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight - img.parentNode.parentNode.querySelector(".main_ask_shape").children[0].clientHeight) / 2
