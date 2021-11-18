@@ -58,6 +58,51 @@
     }
 }
 
+@keyframes moon_animation {
+    0% {
+        box-shadow: 7px 0px 70px 20px rgba(255, 255, 255, 0.5);
+    }
+    20% {
+        box-shadow: 7px 0px 70px 20px rgba(255, 255, 255, 0.5);
+    }
+    25% {
+        box-shadow: 7px 0px 70px 20px rgba(255, 255, 255, 0.6);
+    }
+    30% {
+        box-shadow: 7px 0px 70px 20px rgba(255, 255, 255, 0.7);
+    }
+    35% {
+        box-shadow: 7px 0px 70px 20px rgba(255, 255, 255, 0.8);
+    }
+    40% {
+        box-shadow: 7px 0px 70px 20px rgba(255, 255, 255, 0.8);
+    }
+    45% {
+        box-shadow: 7px 0px 70px 20px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        box-shadow: 7px 0px 70px 20px rgba(255, 255, 255, 0.8);
+    }
+    55% {
+        box-shadow: 7px 0px 70px 20px rgba(255, 255, 255, 0.8);
+    }
+    65% {
+        box-shadow: 7px 0px 70px 20px rgba(255, 255, 255, 0.8);
+    }
+    70% {
+        box-shadow: 7px 0px 70px 20px rgba(255, 255, 255, 0.7);
+    }
+    85% {
+        box-shadow: 7px 0px 70px 20px rgba(255, 255, 255, 0.6);
+    }
+    90% {
+        box-shadow: 7px 0px 70px 20px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        box-shadow: 7px 0px 70px 20px rgba(255, 255, 255, 0.5);
+    }
+}
+
 ::-webkit-scrollbar { /* chrome based */
     width: 0px;  /* ширина scrollbar'a */
     background: transparent;  /* опционально */
@@ -259,9 +304,26 @@
     width: 10%;
 }
 
+.moon::before {
+    content: "";
+    top: 20px;
+    left: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 7px 0px 70px 20px rgba(255, 255, 255, 0.5);
+    position: absolute;
+    animation: moon_animation 5s infinite linear;
+}
+
 .moon img {
     width: 100%;
     vertical-align: bottom;
+    border-radius: 5000px;
+}
+
+.each_star {
+    position: relative;
 }
 
 .each_star img {
@@ -668,6 +730,11 @@
 
 .team_row .each_team_person p:nth-child(3) {
     margin-top: 10px;
+}
+
+.main_img img {
+    width: 100%;
+    vertical-align: bottom;
 }
 
 @media screen and (max-width: 1800px){

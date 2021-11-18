@@ -11,6 +11,11 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + "/views/main.html")
 })
 
+
+app.get("/second_v", (req, res) => {
+    res.sendFile(__dirname + "/views/main2.html")
+})
+
 app.listen(PORT, () => {
     console.log(PORT)
 })
