@@ -834,6 +834,7 @@
 
     .team_row {
         width: 80%;
+        margin-left: 10%;
     }
 
     .third .star_row:nth-child(1) .each_star:nth-child(2) {
@@ -975,5 +976,15 @@
     .third .star_row:nth-child(1) .each_star:nth-child(2) {
         margin-left: 70%;
         margin-top: -50px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .star_row {
+        display: none;
+    }
+
+    .palms {
+        display: none;
     }
 }
