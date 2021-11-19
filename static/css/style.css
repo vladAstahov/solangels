@@ -116,7 +116,6 @@
 *, body {
     padding: 0;
     margin: 0;
-    -webkit-text-size-adjust: none;
 }
 
 .without_header {
@@ -1367,7 +1366,6 @@
     }
 
     .main_part {
-        -webkit-text-size-adjust: none;
         width: 90%;
         margin-top: 20px;
         padding-bottom: 30px;
@@ -1506,6 +1504,6 @@
     }
 
     .main_text {
-        -webkit-text-size-adjust: none;
+        -webkit-text-size-adjust: 100%;
     }
 }
