@@ -1356,6 +1356,10 @@ html {
 }
 
 @media screen and (max-width: 500px) {
+    body {
+        -webkit-text-size-adjust: none;
+    }
+
     .menu {
         padding-top: 5%;
     }
@@ -1509,7 +1513,7 @@ html {
     }
 
     .main_text {
-        -webkit-text-size-adjust: 100%;
+        -webkit-text-size-adjust: none;
         -webkit-appearance: none;
         text-rendering: geometricPrecision;
     }
