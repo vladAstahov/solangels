@@ -8,7 +8,9 @@
 
 @font-face {
     font-family: 'JetBrainsMono';
-    src: url('/static/fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+    src: url('/static/fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype'),
+         url('/static/fonts/JetBrainsMono-VariableFont_wght.woff2') format('woff2'),
+         url('/static/fonts/JetBrainsMono-VariableFont_wght.woff') format('woff');
     font-weight: 800;
     font-style: normal;
 }
