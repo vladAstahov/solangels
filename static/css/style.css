@@ -1513,4 +1513,8 @@ html {
         -webkit-appearance: none;
         text-rendering: geometricPrecision;
     }
+
+    .left_part.adaptive img {
+        width: 20px;
+    }
 }
