@@ -13,6 +13,7 @@
          url('/static/fonts/JetBrainsMono-VariableFont_wght.woff') format('woff');
     font-weight: 800;
     font-style: normal;
+    -webkit-text-size-adjust: none;
 }
 
 @font-face {
