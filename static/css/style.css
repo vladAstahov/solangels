@@ -108,6 +108,10 @@
     background: transparent;  /* опционально */
 }
 
+.left_part.adaptive {
+    display: none;
+}
+
 *, body {
     padding: 0;
     margin: 0;
@@ -118,6 +122,10 @@
 }
 
 .hiden {
+    display: none!important;
+}
+
+.adaptive {
     display: none!important;
 }
 
@@ -1053,5 +1061,183 @@
 
     .palms {
         display: none;
+    }
+
+    .slide {
+        height: fit-content!important;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .first .menu {
+        display: flex!important;
+    }
+
+    .left_part {
+        display: none;
+    }
+
+    .unadaptive {
+        display: none!important;
+    }
+
+    .adaptive {
+        display: block!important;
+    }
+
+    .left_part.adaptive img {
+        width: 40px;
+    }
+
+    .right_part img {
+        width: 40px;
+    }
+
+    .menu .left_part {
+        width: 85%;
+    }
+
+    .menu .right_part {
+        width: 15%;
+    }
+
+    .menu .right_part img:first-child {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .main_part {
+        margin-top: 80px;
+        font-size: 23px;
+        line-height: 35px;
+        padding-bottom: 20px;
+    }
+
+    .main_part .main_text {
+        margin-top: 30px;
+    }
+
+    .header_slide {
+        margin-top: 0;
+        padding-top: 50px;
+    }
+
+    .header_slide h1 {
+        font-size: 30px;
+    }
+
+    .first_com_section {
+        margin-top: 40px;
+    }
+
+    .first_com_section_men {
+        margin-top: -50px;
+        padding-bottom: 20px;
+    }
+
+    .first_com_section_men_each {
+        width: 20%;
+    }
+
+    .first_com_section_men_each:last-child {
+        margin-left: 35%;
+    }
+
+    .first_com_section_men_each_wow {
+        font-size: 40px;
+        padding-top: 20px;
+        padding-left: 10px;
+    }
+
+    .third .roadmap_step.first_step {
+        margin-top: 40px;
+    }
+
+    .roadmap_step {
+        margin-top: 40px;
+    }
+
+    .roadmap_step_header h2 {
+        font-size: 28px;
+    }
+
+    .roadmap_step_header h2.grad {
+        line-height: 35px;
+    }
+
+    .roadmap_step_text {
+        margin-top: 10px;
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    .third.third_second .roadmap_step.first_step {
+        margin-top: 0;
+        padding-top: 30px;
+    }
+
+    .third.third_third .roadmap_step.first_step {
+        margin-top: 0;
+        padding-top: 30px;
+    }
+
+    .last_step {
+        padding-bottom: 20px;
+    }
+
+    .ask {
+        margin-top: 0px;
+        padding-top: 40px;
+    }
+
+    .ask_img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .ask_shape {
+        width: calc(100% - 100px - 5%);
+    }
+
+    .main_ask_shape {
+        margin-top: 5px;
+        width: calc(100% - 45px);
+    }
+
+    .main_ask_shape p {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .f_ask_shape {
+        width: 15px;
+        height: 15px;
+        margin-top: 0;
+    }
+
+    .s_ask_shape {
+        width: 15px;
+        height: 30px;
+        margin-top: 0;
+    }
+
+    .t_ask_shape {
+        width: 15px;
+        height: 45px;
+        margin-top: 0;
+    }
+
+    .answer .ask_shape {
+        margin-left: 0;
+    }
+
+    .question {
+        display: none!important;
+    }
+
+    .without_header {
+        margin-top: 0!important;
     }
 }

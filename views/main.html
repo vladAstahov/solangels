@@ -16,6 +16,9 @@
                 <img src="/static/img/bg_img.png" alt="">
             </div>
             <div class="menu in_block">
+                <div class="left_part adaptive">
+                    <img src="/static/img/adaptive_menu.png" alt="">
+                </div>
                 <div class="left_part">
                     <a href="/#collection">Collection</a>
                     <a href="/#collection">Roadmap</a>
@@ -28,7 +31,7 @@
             </div>
             <div class="main_part in_block">
                 <div class="main_img">
-                    <img src="/static/img/Animation_without_shadow3.gif" alt="">
+                    <img src="/static/img/main_anim.gif" alt="">
                 </div>
                 <div class="main_text">
                     <p>4844 Dreamers on Solana blockchain.</p>
@@ -86,8 +89,11 @@
             <div class="header_slide in_block">
                 <h1>Collection</h1>
             </div>
-            <div class="first_com_section in_block">
+            <div class="first_com_section in_block unadaptive">
                 <img src="/static/img/first_diolog_pc_version.png" alt="">
+            </div>
+            <div class="first_com_section in_block adaptive">
+                <img src="/static/img/first_diolog_mobile_version.svg" alt="">
             </div>
             <div class="first_com_section_men in_block">
                 <div class="first_com_section_men_each">
@@ -319,7 +325,7 @@
                         </p>
                 </div>
             </div>
-            <div class="roadmap_step in_block">
+            <div class="roadmap_step in_block last_step">
                 <div class="roadmap_step_header">
                     <h2>9.Step </h2>
                     <h2 class="grad">nine</h2>
@@ -982,8 +988,7 @@
     <script src="/static/js/main.js"></script>
     <script src="/static/js/jquery.onepage-scroll.js"></script>
     <script>
-        $(function() {
-            if (window.screen.width > 1024) {
+            $(function() {
                 $(".main").onepage_scroll({
                     sectionContainer: "section", // это часть берет любой селектор если вы не хотите использовать секцию поставьте другой html тег
                     easing: "ease", // Опции плавности принимает только CSS3 свойства такие как "ease", "linear", "ease-in", "ease-out", "ease-in-out",или даже cubic bezier  "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
@@ -995,8 +1000,11 @@
                     loop: true, // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
                     responsiveFallback: 600 //
                 });
-            }
-        })
+                if (window.screen.width < 1025) {
+                    $("body").addClass("disabled-onepage-scroll");
+                }
+            })
+        
     </script>
 </body>
 </html>

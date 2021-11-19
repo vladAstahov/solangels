@@ -1,9 +1,16 @@
 function check_mt(img) {
-    if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 120 && window.screen.height > 800 && !img.parentNode.parentNode.classList.contains("hiden")) {
-        img.parentNode.parentNode.querySelector(".main_ask_shape").style.height = `120px`
-    } else if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 80 && window.screen.height <= 800 && !img.parentNode.parentNode.classList.contains("hiden")) {
-        img.parentNode.parentNode.querySelector(".main_ask_shape").style.height = `80px`
+    if (window.screen.width > 1024) {
+        if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 120 && window.screen.height > 800 && !img.parentNode.parentNode.classList.contains("hiden")) {
+            img.parentNode.parentNode.querySelector(".main_ask_shape").style.height = `120px`
+        } else if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 80 && window.screen.height <= 800 && !img.parentNode.parentNode.classList.contains("hiden")) {
+            img.parentNode.parentNode.querySelector(".main_ask_shape").style.height = `80px`
+        }
+    } else {
+        if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 90 && window.screen.width > 500 && !img.parentNode.parentNode.classList.contains("hiden")) {
+            img.parentNode.parentNode.querySelector(".main_ask_shape").style.height = `90px`
+        }
     }
+    
     var padding = (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight - img.parentNode.parentNode.querySelector(".main_ask_shape").children[0].clientHeight) / 2
     var parent_height = img.parentNode.parentNode.querySelector(".ask_shape").clientHeight
     if (window.screen.width > 1280) {
@@ -12,7 +19,15 @@ function check_mt(img) {
     img.parentNode.parentNode.querySelector(".ask_shape").querySelector(".f_ask_shape").style.marginTop = String(parent_height - img.parentNode.parentNode.querySelector(".ask_shape").querySelector(".f_ask_shape").clientHeight) + "px"
     img.parentNode.parentNode.querySelector(".ask_shape").querySelector(".s_ask_shape").style.marginTop = String(parent_height - img.parentNode.parentNode.querySelector(".ask_shape").querySelector(".s_ask_shape").clientHeight) + "px"
     img.parentNode.parentNode.querySelector(".ask_shape").querySelector(".t_ask_shape").style.marginTop = String(parent_height - img.parentNode.parentNode.querySelector(".ask_shape").querySelector(".t_ask_shape").clientHeight) + "px"
-    img.parentNode.parentNode.querySelector(".main_ask_shape").children[0].style.marginTop = String(padding) + "px"
+    if (padding != 0) {
+        img.parentNode.parentNode.querySelector(".main_ask_shape").children[0].style.marginTop = String(padding) + "px"
+    } else {
+        if (window.screen.width < 1025) {
+            img.parentNode.parentNode.querySelector(".main_ask_shape").children[0].style.marginTop = "10px"
+            img.parentNode.parentNode.querySelector(".main_ask_shape").children[0].style.marginBottom = "10px"
+        }
+    }
+    
 }
 
 function show_answer(dom) {
