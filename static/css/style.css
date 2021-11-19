@@ -1371,8 +1371,9 @@
         width: 90%;
         margin-top: 20px;
         padding-bottom: 30px;
-        font-size: 15px;
+        font-size: 10px;
         line-height: 1.2;
+        font-weight: 800;
     }
 
     .header_slide {
