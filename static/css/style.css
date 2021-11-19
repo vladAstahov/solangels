@@ -8,16 +8,8 @@
 @font-face {
     font-family: 'JetBrainsMono';
     src: url('/static/fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
-    src: url('/static/fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
-    src: url('/static/fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+    src: url('/static/fonts/JetBrainsMono-VariableFont_wght.woff') format('truetype');
     font-weight: 800;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'JetBrainsMono_light';
-    src: url('/static/fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
-    font-weight: normal;
     font-style: normal;
 }
 
@@ -1368,6 +1360,7 @@
     }
 
     .main_part {
+        -webkit-text-size-adjust: 100%;
         width: 90%;
         margin-top: 20px;
         padding-bottom: 30px;
