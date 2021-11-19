@@ -8,6 +8,8 @@
 @font-face {
     font-family: 'JetBrainsMono';
     src: url('/static/fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+    src: url('/static/fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+    src: url('/static/fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
 }
@@ -1368,8 +1370,8 @@
         width: 90%;
         margin-top: 20px;
         padding-bottom: 30px;
-        font-size: 10px;
-        line-height: 20px;
+        font-size: 15px;
+        line-height: 50px;
     }
 
     .header_slide {
