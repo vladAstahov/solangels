@@ -1518,6 +1518,10 @@ html {
         text-rendering: geometricPrecision;
     }
 
+    .left_part {
+        width: 0px;
+    }
+
     .left_part.adaptive img {
         width: 20px;
     }
