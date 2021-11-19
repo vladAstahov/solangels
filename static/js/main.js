@@ -1,16 +1,19 @@
 function check_mt(img, is_load) {
-    if (window.screen.width > 1024) {
-        if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 120 && window.screen.height > 800 && !img.parentNode.parentNode.classList.contains("hiden")) {
-            img.parentNode.parentNode.querySelector(".main_ask_shape").style.height = `120px`
-        } else if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 80 && window.screen.height <= 800 && !img.parentNode.parentNode.classList.contains("hiden")) {
-            img.parentNode.parentNode.querySelector(".main_ask_shape").style.height = `80px`
-        }
-    } else {
-        if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 90 && window.screen.width > 500 && !img.parentNode.parentNode.classList.contains("hiden")) {
-            img.parentNode.parentNode.querySelector(".main_ask_shape").style.height = `90px`
-        }
-    }
+    
     if (is_load == false) {
+        if (window.screen.width > 1024) {
+            if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 120 && window.screen.height > 800 && !img.parentNode.parentNode.classList.contains("hiden")) {
+                img.parentNode.parentNode.querySelector(".main_ask_shape").style.height = `120px`
+            } else if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 80 && window.screen.height <= 800 && !img.parentNode.parentNode.classList.contains("hiden")) {
+                img.parentNode.parentNode.querySelector(".main_ask_shape").style.height = `80px`
+            }
+        } else {
+            if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 90 && window.screen.width > 500 && !img.parentNode.parentNode.classList.contains("hiden")) {
+                img.parentNode.parentNode.querySelector(".main_ask_shape").style.height = `90px`
+            } else if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 80 && window.screen.width <= 500 && !img.parentNode.parentNode.classList.contains("hiden")) {
+                img.parentNode.parentNode.querySelector(".main_ask_shape").style.height = `50px`
+            }
+        }
         var padding = 0
         padding = (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight - img.parentNode.parentNode.querySelector(".main_ask_shape").children[0].clientHeight) / 2
         if (img.parentNode.parentNode.querySelector(".main_ask_shape").classList.contains("big_answer")) {
@@ -43,6 +46,19 @@ function check_mt(img, is_load) {
         img.parentNode.parentNode.querySelector(".ask_shape").querySelector(".t_ask_shape").style.marginTop = String(parent_height - img.parentNode.parentNode.querySelector(".ask_shape").querySelector(".t_ask_shape").clientHeight) + "px"
     } else {
         setTimeout(() => {
+            if (window.screen.width > 1024) {
+                if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 120 && window.screen.height > 800 && !img.parentNode.parentNode.classList.contains("hiden")) {
+                    img.parentNode.parentNode.querySelector(".main_ask_shape").style.height = `120px`
+                } else if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 80 && window.screen.height <= 800 && !img.parentNode.parentNode.classList.contains("hiden")) {
+                    img.parentNode.parentNode.querySelector(".main_ask_shape").style.height = `80px`
+                }
+            } else {
+                if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 90 && window.screen.width > 500 && !img.parentNode.parentNode.classList.contains("hiden")) {
+                    img.parentNode.parentNode.querySelector(".main_ask_shape").style.height = `90px`
+                } else if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 50 && window.screen.width <= 500 && !img.parentNode.parentNode.classList.contains("hiden")) {
+                    img.parentNode.parentNode.querySelector(".main_ask_shape").style.height = `50px`
+                }
+            }
             var padding = 0
             padding = (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight - img.parentNode.parentNode.querySelector(".main_ask_shape").children[0].clientHeight) / 2
             if (img.parentNode.parentNode.querySelector(".main_ask_shape").classList.contains("big_answer")) {
@@ -71,6 +87,8 @@ function check_mt(img, is_load) {
             var parent_height = img.parentNode.parentNode.querySelector(".ask_shape").clientHeight
             if (window.screen.width > 1280) {
                 img.style.marginTop = String(parent_height - img.clientHeight + 20) + "px"
+            } else {
+                img.style.marginTop = String(parent_height - img.clientHeight + 10) + "px"
             }
             img.parentNode.parentNode.querySelector(".ask_shape").querySelector(".f_ask_shape").style.marginTop = String(parent_height - img.parentNode.parentNode.querySelector(".ask_shape").querySelector(".f_ask_shape").clientHeight) + "px"
             img.parentNode.parentNode.querySelector(".ask_shape").querySelector(".s_ask_shape").style.marginTop = String(parent_height - img.parentNode.parentNode.querySelector(".ask_shape").querySelector(".s_ask_shape").clientHeight) + "px"

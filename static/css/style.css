@@ -1106,6 +1106,10 @@
 }
 
 @media screen and (max-width: 1024px) {
+    .menu .left_part {
+        opacity: 0;
+    }
+
     .bg_img {
         height: 100%;
     }
@@ -1310,4 +1314,193 @@
     .team_row .each_team_person p {
         font-size: 20px;
     }
+
+    .main_ask_shape.img_answer {
+        margin-left: calc(100% - 45px - 170px
+        );
+    }
+
+    .main_ask_shape.img_answer img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .team_row {
+        padding-bottom: 150px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .menu .left_part {
+        width: 80%;
+    }
+
+    .menu .right_part {
+        width: 20%;
+    }
+
+    .main_part {
+        width: 70%;
+        margin-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .politic_str h4 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .menu {
+        padding-top: 5%;
+    }
+
+    .menu .right_part img:first-child {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .right_part img {
+        width: 20px;
+    }
+
+    .main_part {
+        width: 90%;
+        margin-top: 20px;
+        padding-bottom: 30px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .header_slide {
+        padding-top: 30px;
+    }
+
+    .header_slide h1 {
+        font-size: 20px;
+    }
+
+    .first_com_section {
+        width: 90%;
+        margin-top: 25px;
+    }
+
+    .first_com_section_men {
+        width: 90%;
+        margin-top: -20px;
+    }
+
+    .first_com_section_men_each {
+        width: 30%;
+    }
+
+    .first_com_section_men_each_wow {
+        font-size: 25px;
+        padding-top: 30px;
+    }
+
+    .first_com_section_men_each:last-child {
+        margin-left: 20%;
+    }
+
+    .third .roadmap_step.first_step {
+        margin-top: 20px;
+    }
+
+    .roadmap_step {
+        margin-top: 20px;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .roadmap_step_header h2 {
+        font-size: 18px;
+        margin-right: 1%;
+    }
+
+    .roadmap_step_header h2.grad {
+        line-height: 23px;
+        margin-left: 1%;
+    }
+
+    .roadmap_step_text {
+        margin-top: 5px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .faq_block {
+        width: 90%;
+    }
+
+    .ask_img {
+        width: 60px;
+        height: 60px;
+        margin-left: 2%;
+    }
+
+    .f_ask_shape {
+        width: 10px;
+        height: 10px;
+    }
+
+    .s_ask_shape {
+        width: 10px;
+        height: 20px;
+    }
+
+    .t_ask_shape {
+        width: 10px;
+        height: 30px;
+    }
+
+    .ask_shape {
+        width: calc(100% - 60px - 2%);
+    }
+
+    .main_ask_shape {
+        width: calc(100% - 30px);
+    }
+
+    .main_ask_shape p {
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .main_ask_shape.img_answer {
+        margin-left: calc(100% - 45px - 80px);
+    }
+
+    .main_ask_shape.img_answer img {
+        width: 40px;
+        height: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .last_block .header_slide {
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+
+    .team_row {
+        width: 90%;
+        margin-left: 5%;
+        padding-bottom: 100px;
+    }
+
+    .team_row .each_team_person {
+        width: 80%;
+    }
+
+    .team_row .each_team_person p {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .politic_str h4 {
+        font-size: 11px;
+    }
+
+
 }
