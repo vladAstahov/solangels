@@ -1507,5 +1507,6 @@
     .main_text {
         -webkit-text-size-adjust: 100%;
         -webkit-appearance: none;
+        text-rendering: optimizeLegibility;
     }
 }
