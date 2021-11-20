@@ -126,3 +126,9 @@ function bot_null(dom){
     var padding = (parent_height - dom.clientHeight)
     dom.style.paddingTop = String(padding) + "px"
 }
+
+window.onload = () => {
+    if (window.screen.width < 1025) {
+        document.querySelector(".first").classList.remove("active")
+    }
+}
