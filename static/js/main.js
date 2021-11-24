@@ -1,106 +1,23 @@
-function check_mt(img, is_load) {
-    
-    if (is_load == false) {
-        if (window.screen.width > 1024) {
-            if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 120 && window.screen.height > 800 && !img.parentNode.parentNode.classList.contains("hiden")) {
-                img.parentNode.parentNode.querySelector(".main_ask_shape").style.height = `120px`
-            } else if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 80 && window.screen.height <= 800 && !img.parentNode.parentNode.classList.contains("hiden")) {
-                img.parentNode.parentNode.querySelector(".main_ask_shape").style.height = `80px`
-            }
-        } else {
-            if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 90 && window.screen.width > 500 && !img.parentNode.parentNode.classList.contains("hiden")) {
-                img.parentNode.parentNode.querySelector(".main_ask_shape").style.height = `90px`
-            } else if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 80 && window.screen.width <= 500 && !img.parentNode.parentNode.classList.contains("hiden")) {
-                img.parentNode.parentNode.querySelector(".main_ask_shape").style.height = `50px`
-            }
-        }
-        var padding = 0
-        padding = (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight - img.parentNode.parentNode.querySelector(".main_ask_shape").children[0].clientHeight) / 2
-        if (img.parentNode.parentNode.querySelector(".main_ask_shape").classList.contains("big_answer")) {
-            padding = (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight - img.parentNode.parentNode.querySelector(".main_ask_shape").children[0].clientHeight - img.parentNode.parentNode.querySelector(".main_ask_shape").children[1].clientHeight - img.parentNode.parentNode.querySelector(".main_ask_shape").children[2].clientHeight) / 2
-        }
+function check_mt(img) {
+    var ask_main_shape = img.parentNode.parentNode.querySelector(".ask_main_shape")
+    var ask_main_shape_h = ask_main_shape.clientHeight
 
-        if (!img.parentNode.parentNode.querySelector(".main_ask_shape").classList.contains("img_answer")) {
-            if (padding != 0) {
-                if (img.parentNode.parentNode.querySelector(".main_ask_shape").classList.contains("big_answer")) {
-                    img.parentNode.parentNode.querySelector(".main_ask_shape").children[0].style.marginTop = String(padding / 2) + "px"
-                    img.parentNode.parentNode.querySelector(".main_ask_shape").children[3].style.marginBottom = String(padding / 2) + "px"
-                } else {
-                    img.parentNode.parentNode.querySelector(".main_ask_shape").children[0].style.marginTop = String(padding) + "px"
-                    img.parentNode.parentNode.querySelector(".main_ask_shape").children[0].style.marginBottom = String(padding) + "px"
-                }
-            } else {
-                    img.parentNode.parentNode.querySelector(".main_ask_shape").children[0].style.marginTop = "10px"
-                    img.parentNode.parentNode.querySelector(".main_ask_shape").children[0].style.marginBottom = "10px"
-            }
-        } else {
-            img.parentNode.parentNode.querySelector(".main_ask_shape").children[0].style.marginTop = String(padding) + "px"
+    ask_main_shape.querySelector(".f_shape").style.marginTop = String((ask_main_shape_h - 20) / 2) + "px"
+    ask_main_shape.querySelector(".s_shape").style.marginTop = String((ask_main_shape_h - 20) / 2) + "px"
+
+    if (window.screen.width > 1300) {
+        if (ask_main_shape_h > 130) {
+            var now_img_mt = parseInt(String(window.getComputedStyle(ask_main_shape, null).getPropertyValue("margin-top")).slice(0, -2))
+            var new_img_mt = ((ask_main_shape_h - img.parentNode.clientHeight) / 2) + now_img_mt
+            img.parentNode.style.marginTop = String(new_img_mt) + "px"
         }
-        
-        var parent_height = img.parentNode.parentNode.querySelector(".ask_shape").clientHeight
-        if (window.screen.width > 1280) {
-            img.style.marginTop = String(parent_height - img.clientHeight + 20) + "px"
-        }
-        img.parentNode.parentNode.querySelector(".ask_shape").querySelector(".f_ask_shape").style.marginTop = String(parent_height - img.parentNode.parentNode.querySelector(".ask_shape").querySelector(".f_ask_shape").clientHeight) + "px"
-        img.parentNode.parentNode.querySelector(".ask_shape").querySelector(".s_ask_shape").style.marginTop = String(parent_height - img.parentNode.parentNode.querySelector(".ask_shape").querySelector(".s_ask_shape").clientHeight) + "px"
-        img.parentNode.parentNode.querySelector(".ask_shape").querySelector(".t_ask_shape").style.marginTop = String(parent_height - img.parentNode.parentNode.querySelector(".ask_shape").querySelector(".t_ask_shape").clientHeight) + "px"
     } else {
-        setTimeout(() => {
-            if (window.screen.width > 1024) {
-                if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 120 && window.screen.height > 800 && !img.parentNode.parentNode.classList.contains("hiden")) {
-                    img.parentNode.parentNode.querySelector(".main_ask_shape").style.height = `120px`
-                } else if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 80 && window.screen.height <= 800 && !img.parentNode.parentNode.classList.contains("hiden")) {
-                    img.parentNode.parentNode.querySelector(".main_ask_shape").style.height = `80px`
-                }
-            } else {
-                if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 90 && window.screen.width > 500 && !img.parentNode.parentNode.classList.contains("hiden")) {
-                    img.parentNode.parentNode.querySelector(".main_ask_shape").style.height = `90px`
-                } else if (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight < 50 && window.screen.width <= 500 && !img.parentNode.parentNode.classList.contains("hiden")) {
-                    img.parentNode.parentNode.querySelector(".main_ask_shape").style.height = `50px`
-                }
-            }
-            var padding = 0
-            padding = (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight - img.parentNode.parentNode.querySelector(".main_ask_shape").children[0].clientHeight) / 2
-            if (img.parentNode.parentNode.querySelector(".main_ask_shape").classList.contains("big_answer")) {
-                padding = (img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight - img.parentNode.parentNode.querySelector(".main_ask_shape").children[0].clientHeight - img.parentNode.parentNode.querySelector(".main_ask_shape").children[1].clientHeight - img.parentNode.parentNode.querySelector(".main_ask_shape").children[2].clientHeight) / 2
-            }
-    
-            if (!img.parentNode.parentNode.querySelector(".main_ask_shape").classList.contains("img_answer")) {
-                if (padding != 0) {
-                    if (img.parentNode.parentNode.querySelector(".main_ask_shape").classList.contains("big_answer")) {
-                        img.parentNode.parentNode.querySelector(".main_ask_shape").children[0].style.marginTop = String(padding / 2) + "px"
-                        img.parentNode.parentNode.querySelector(".main_ask_shape").children[3].style.marginBottom = String(padding / 2) + "px"
-                    } else {
-                        img.parentNode.parentNode.querySelector(".main_ask_shape").children[0].style.marginTop = String(padding) + "px"
-                        img.parentNode.parentNode.querySelector(".main_ask_shape").children[0].style.marginBottom = String(padding) + "px"
-                    }
-                } else {
-                    if (window.screen.width < 1025) {
-                        img.parentNode.parentNode.querySelector(".main_ask_shape").children[0].style.marginTop = "10px"
-                        img.parentNode.parentNode.querySelector(".main_ask_shape").children[0].style.marginBottom = "10px"
-                    }
-                }
-            } else {
-                img.parentNode.parentNode.querySelector(".main_ask_shape").children[0].style.marginTop = String(padding) + "px"
-            }
-            
-            var parent_height = img.parentNode.parentNode.querySelector(".ask_shape").clientHeight
-            if (window.screen.width > 1280) {
-                img.style.marginTop = String(parent_height - img.clientHeight + 20) + "px"
-            } else {
-                img.style.marginTop = String(parent_height - img.clientHeight + 10) + "px"
-            }
-            img.parentNode.parentNode.querySelector(".ask_shape").querySelector(".f_ask_shape").style.marginTop = String(parent_height - img.parentNode.parentNode.querySelector(".ask_shape").querySelector(".f_ask_shape").clientHeight) + "px"
-            img.parentNode.parentNode.querySelector(".ask_shape").querySelector(".s_ask_shape").style.marginTop = String(parent_height - img.parentNode.parentNode.querySelector(".ask_shape").querySelector(".s_ask_shape").clientHeight) + "px"
-            img.parentNode.parentNode.querySelector(".ask_shape").querySelector(".t_ask_shape").style.marginTop = String(parent_height - img.parentNode.parentNode.querySelector(".ask_shape").querySelector(".t_ask_shape").clientHeight) + "px"
-        }, 1000);
+        if (ask_main_shape_h > 100) {
+            var now_img_mt = parseInt(String(window.getComputedStyle(ask_main_shape, null).getPropertyValue("margin-top")).slice(0, -2))
+            var new_img_mt = ((ask_main_shape_h - img.parentNode.clientHeight) / 2) + now_img_mt
+            img.parentNode.style.marginTop = String(new_img_mt) + "px"
+        }
     }
-    
-    /*
-    if (img.parentNode.parentNode.querySelector(".main_ask_shape").children[0].clientHeight + padding > img.parentNode.parentNode.querySelector(".main_ask_shape").clientHeight) {
-        padding = padding / 2
-    }
-    */
     
 }
 
@@ -125,10 +42,4 @@ function bot_null(dom){
     var parent_height = dom.parentNode.clientHeight
     var padding = (parent_height - dom.clientHeight)
     dom.style.paddingTop = String(padding) + "px"
-}
-
-window.onload = () => {
-    if (window.screen.width < 1025) {
-        document.querySelector(".first").classList.remove("active")
-    }
 }
