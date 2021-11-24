@@ -116,6 +116,7 @@
     display: flex;
     z-index: 7;
     width: 100%;
+    opacity: 0;
 }
 
 .star_row:nth-child(1) {
@@ -448,6 +449,7 @@
     width: 50%;
     margin: 0 auto;
     padding-bottom: 40px;
+    opacity: 0;
 }
 
 .roadmap_step_header h2 {
@@ -681,6 +683,11 @@
     width: 20%;
     margin-left: 0;
     margin-right: 45%;
+}
+
+.element-show {
+    opacity: 1;
+    transition: all 1.5s;
 }
 
 @media screen and (max-width: 1600px) {

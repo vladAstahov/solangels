@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
+    <script src="/static/js/main.js"></script>
     <div class="main">
         <section class="slide first">
             <div class="star_row">
@@ -641,7 +642,30 @@
             </div>
         </section>
     </div>
-    
-    <script src="/static/js/main.js"></script>
+    <script>
+        function onEntry(entry) {
+          entry.forEach(change => {
+            if (change.isIntersecting) {
+             change.target.classList.add('element-show');
+            }
+          });
+        }
+
+        let options = {
+            threshold: [0.5] 
+        };
+        let observer = new IntersectionObserver(onEntry, options);
+        let elements = document.querySelectorAll('.roadmap_step');
+        
+        for (let elm of elements) {
+          observer.observe(elm);
+        }
+
+        elements = document.querySelectorAll('.star_row');
+        
+        for (let elm of elements) {
+          observer.observe(elm);
+        }
+    </script>
 </body>
 </html>
