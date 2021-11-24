@@ -11,11 +11,28 @@ function check_mt(img) {
             var new_img_mt = ((ask_main_shape_h - img.parentNode.clientHeight) / 2) + now_img_mt
             img.parentNode.style.marginTop = String(new_img_mt) + "px"
         }
-    } else {
+    } else if (window.screen.width < 1300 && window.screen.width > 500) {
         if (ask_main_shape_h > 100) {
             var now_img_mt = parseInt(String(window.getComputedStyle(ask_main_shape, null).getPropertyValue("margin-top")).slice(0, -2))
             var new_img_mt = ((ask_main_shape_h - img.parentNode.clientHeight) / 2) + now_img_mt
             img.parentNode.style.marginTop = String(new_img_mt) + "px"
+        }
+    } else {
+        if (ask_main_shape_h > 50) {
+            var now_img_mt = parseInt(String(window.getComputedStyle(ask_main_shape, null).getPropertyValue("margin-top")).slice(0, -2))
+            var new_img_mt = ((ask_main_shape_h - img.parentNode.clientHeight) / 2) + now_img_mt
+            img.parentNode.style.marginTop = String(new_img_mt) + "px"
+        } else {
+            if (ask_main_shape_h < 48) {
+                var padding = String(( 50 - ask_main_shape.querySelector(".shape").children[0].clientHeight ) / 2) + "px"
+                ask_main_shape.querySelector(".shape").children[0].style.paddingTop = padding
+                ask_main_shape.querySelector(".shape").children[0].style.paddingBottom = padding
+
+                ask_main_shape_h = img.parentNode.parentNode.querySelector(".ask_main_shape").clientHeight
+
+                ask_main_shape.querySelector(".f_shape").style.marginTop = String((ask_main_shape_h - 20) / 4 * 3) + "px"
+                ask_main_shape.querySelector(".s_shape").style.marginTop = String((ask_main_shape_h - 20) / 4 * 3) + "px"
+            }
         }
     }
     
