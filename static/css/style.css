@@ -614,8 +614,20 @@
 }
 
 .moon_img {
+    position: relative;
     width: 10%;
     margin-left: 85%;
+}
+
+.moon_img::before {
+    animation: moon_animation 5s linear infinite;
+    content: "";
+    width: 50%;
+    height: 50%;
+    top: 25%;
+    left: 25%;
+    box-shadow: 0 0 100px #fff;
+    position: absolute;
 }
 
 .moon_img img {
