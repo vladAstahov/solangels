@@ -60,3 +60,14 @@ function bot_null(dom){
     var padding = (parent_height - dom.clientHeight)
     dom.style.paddingTop = String(padding) + "px"
 }
+
+function show_menu() {
+    if (document.querySelector(".adaptive_menu").classList.contains("element-show")) {
+        document.querySelector(".adaptive_menu").classList.remove("element-show")
+        document.querySelector(".adaptive_menu").classList.add("element-hiden")
+    } else {
+        document.querySelector(".adaptive_menu").classList.remove("element-hiden")
+        document.querySelector(".adaptive_menu").classList.add("element-show")
+    }
+    
+}
