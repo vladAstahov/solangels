@@ -817,13 +817,20 @@
     transition: all 1.5s;
 }
 
+.adaptive_menu.element-show {
+    opacity: 0.9!important;
+    transition: all 1.5s;
+}
+
 .adaptive_menu {
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
     padding-top: 100px;
     z-index: 6;
     height: calc(100% - 100px);
     width: calc(100%);
     position: fixed;
-    background: linear-gradient(180deg, #FD267F 0%, #71119F);
+    background: rgb(24,0,193);
     opacity: 0;
 }
 
