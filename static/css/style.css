@@ -819,7 +819,7 @@
 
 .adaptive_menu.element-show {
     opacity: 0.9!important;
-    transition: all 1.5s;
+    transition: all 1s;
 }
 
 .adaptive_menu {
