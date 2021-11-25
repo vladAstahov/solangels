@@ -817,9 +817,8 @@
     padding-top: 100px;
     z-index: 6;
     height: calc(100% - 100px);
-    padding-left: 5%;
-    width: calc(100% - 5%);
-    position: absolute;
+    width: calc(100%);
+    position: fixed;
     background: linear-gradient(180deg, #FD267F 0%, #71119F);
     opacity: 0;
 }
@@ -830,8 +829,10 @@
     font-size: 13px;
     line-height: 60px;
     color: white;
+    width: 100%;
+    display: block;
+    text-align: center;
 }
-
 @media screen and (max-width: 1600px) {
     .menu .right_part img {
         height: 30px;

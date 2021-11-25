@@ -56,6 +56,13 @@ function show_answer(dom) {
 }
 
 function bot_null(dom){ 
+    var count = 0
+    while (count < 2) {
+        count = 0
+        document.querySelectorAll(".palm_each").forEach((elem, i) => {
+            count++
+        })
+    }
     var parent_height = dom.parentNode.clientHeight
     var padding = (parent_height - dom.clientHeight)
     dom.style.paddingTop = String(padding) + "px"
