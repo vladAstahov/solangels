@@ -76,3 +76,11 @@ function show_menu() {
     }
     
 }
+
+function open_twitter() {
+    window.open("https://twitter.com/SolangelesDream", '_blank');
+}
+
+function open_discord() {
+    window.open("https://discord.gg/RUyjhNheDu", '_blank');
+}
