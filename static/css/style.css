@@ -833,6 +833,10 @@
     display: block;
     text-align: center;
 }
+
+.adaptive_menu {
+    display: none;
+}
 @media screen and (max-width: 1600px) {
     .menu .right_part img {
         height: 30px;
@@ -1011,7 +1015,19 @@
 }
 
 @media screen and (max-width: 500px) {
+    .adaptive_menu {
+        display: block;
+    }
+
     .star_row {
+        display: none;
+    }
+
+    .palms {
+        display: none;
+    }
+
+    .mountain {
         display: none;
     }
 

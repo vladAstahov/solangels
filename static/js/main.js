@@ -55,17 +55,15 @@ function show_answer(dom) {
     }
 }
 
-function bot_null(dom){ 
-    var count = 0
-    while (count < 2) {
-        count = 0
-        document.querySelectorAll(".palm_each").forEach((elem, i) => {
-            count++
-        })
-    }
-    var parent_height = dom.parentNode.clientHeight
-    var padding = (parent_height - dom.clientHeight)
-    dom.style.paddingTop = String(padding) + "px"
+function bot_null(dom){
+    var inter = setInterval(() => {
+        if (document.getElementsByClassName("palm_each")[0].clientHeight != 0 && document.getElementsByClassName("palm_each")[1].clientHeight != 0) {
+            var parent_height = document.getElementsByClassName("palm_each")[0].clientHeight
+            var padding = (parent_height - dom.clientHeight)
+            dom.style.paddingTop = String(padding) + "px"
+            clearInterval(inter)
+        }
+    }, 100) 
 }
 
 function show_menu() {
