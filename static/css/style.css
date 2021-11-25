@@ -845,6 +845,10 @@
     padding-left: 7%;
 }
 
+.adaptive_menu a.team_point {
+    padding-left: calc(7% - 2px);
+}
+
 .adaptive_menu {
     display: none;
 }
