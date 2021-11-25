@@ -2,13 +2,12 @@ function check_mt(img) {
     var ask_main_shape = img.parentNode.parentNode.querySelector(".ask_main_shape")
     var ask_main_shape_h = ask_main_shape.clientHeight
 
-    ask_main_shape.querySelector(".f_shape").style.marginTop = String((ask_main_shape_h - 20) / 2) + "px"
-    ask_main_shape.querySelector(".s_shape").style.marginTop = String((ask_main_shape_h - 20) / 2) + "px"
+    ask_main_shape.querySelector(".f_shape").style.marginTop = String((ask_main_shape_h - ask_main_shape.querySelector(".f_shape").clientHeight) / 2) + "px"
+    ask_main_shape.querySelector(".s_shape").style.marginTop = String((ask_main_shape_h - ask_main_shape.querySelector(".f_shape").clientHeight) / 2) + "px"
 
     if (window.screen.width > 1300) {
-        if (ask_main_shape_h > 130) {
-            var now_img_mt = parseInt(String(window.getComputedStyle(ask_main_shape, null).getPropertyValue("margin-top")).slice(0, -2))
-            var new_img_mt = ((ask_main_shape_h - img.parentNode.clientHeight) / 2) + now_img_mt
+        if (ask_main_shape_h > 120) {
+            var new_img_mt = ((ask_main_shape_h - img.parentNode.clientHeight) / 2)
             img.parentNode.style.marginTop = String(new_img_mt) + "px"
         }
     } else if (window.screen.width < 1300 && window.screen.width > 500) {
@@ -30,8 +29,8 @@ function check_mt(img) {
 
                 ask_main_shape_h = img.parentNode.parentNode.querySelector(".ask_main_shape").clientHeight
 
-                ask_main_shape.querySelector(".f_shape").style.marginTop = String((ask_main_shape_h - 20) / 4 * 3) + "px"
-                ask_main_shape.querySelector(".s_shape").style.marginTop = String((ask_main_shape_h - 20) / 4 * 3) + "px"
+                ask_main_shape.querySelector(".f_shape").style.marginTop = String((ask_main_shape_h) / 4 * 3) + "px"
+                ask_main_shape.querySelector(".s_shape").style.marginTop = String((ask_main_shape_h) / 4 * 3) + "px"
             }
         }
     }
