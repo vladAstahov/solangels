@@ -470,32 +470,6 @@
     padding-right: 5px;
 }
 
-.menu .right_part .right_part_img_block:hover::before {
-    opacity: 1;
-}
-
-.menu .right_part .right_part_img_block:hover img {
-    opacity: 0;
-}
-
-.menu .right_part .twitter::before {
-    content: "";
-    background-image: url(/static/img/twitter_active.svg);
-    width: 100%;
-    height: calc(100% + 4px);
-    position: absolute;
-    opacity: 0;
-}
-
-.menu .right_part .discord::before {
-    content: "";
-    background-image: url(/static/img/discord_active.svg);
-    width: 100%;
-    height: calc(100% + 4px);
-    position: absolute;
-    opacity: 0;
-}
-
 .menu .right_part .right_part_img_block:hover {
     cursor: pointer;
 }
