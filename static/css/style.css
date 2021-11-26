@@ -468,10 +468,30 @@
     height: 34px;
     filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.35));
     padding-right: 5px;
+    position: relative;
+}
+
+.menu .right_part .right_part_img_block .acitve {
+    opacity: 0;
+    position: absolute;
+    z-index: 8;
+    left: 0;
+}
+
+.menu .right_part .right_part_img_block .static {
+    opacity: 1;
 }
 
 .menu .right_part .right_part_img_block:hover {
     cursor: pointer;
+}
+
+.menu .right_part .right_part_img_block:hover .acitve{
+    opacity: 1;
+}
+
+.menu .right_part .right_part_img_block:hover .static{
+    opacity: 0;
 }
 
 .menu .right_part .right_part_img_block:first-child {
