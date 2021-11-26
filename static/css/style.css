@@ -468,6 +468,15 @@
     filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.35));
 }
 
+.menu .right_part img::before {
+    content: "";
+    
+}
+
+.menu .right_part img:hover {
+    cursor: pointer;
+}
+
 .menu .right_part img:first-child {
     margin-left: 30px;
     margin-right: 30px;

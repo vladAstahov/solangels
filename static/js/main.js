@@ -83,3 +83,14 @@ function open_twitter() {
 function open_discord() {
     window.open("https://discord.gg/RUyjhNheDu", '_blank');
 }
+
+function change_twitter_icon(img) {
+    img.src = "/static/img/twitter_active.svg"
+    img.style.height = String(img.clientHeight + 4) + "px"
+    img.nextElementSibling.style.marginTop = "-4px"
+}
+
+function change_twitter_icon_back(img) {
+    img.src = "/static/img/twitter.png"
+    img.style.height = String(img.clientHeight - 4) + "px"
+}
