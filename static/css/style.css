@@ -28,16 +28,16 @@
         opacity: 0.7;
     }
     100% {
-        opacity: 0.4;
+        opacity: 1;
     }
 }
 
 @keyframes third_slide_light_stars {
     50% {
-        opacity: 0.9;
+        opacity: 0.6;
     }
     100% {
-        opacity: 0.6;
+        opacity: 1;
     }
 }
 
@@ -117,6 +117,14 @@
     z-index: 7;
     width: 100%;
     opacity: 0;
+}
+
+.big_star {
+    animation: third_slide_light_stars 3s linear infinite 2s;
+}
+
+.little_star {
+    animation: second_slide_light_stars 2s linear infinite;
 }
 
 .star_row:nth-child(1) {
@@ -505,6 +513,7 @@
 }
 
 .main_part {
+    position: relative;
     background: none;
     width: 50%;
     margin: 0 auto;
@@ -520,6 +529,26 @@
 
 .main_part .main_text {
     margin-top: 40px;
+}
+
+.under_img_text {
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    line-height: 30px;
+    text-align: center;
+    width: fit-content;
+    right: -5%;
+    transform: rotate(-10deg);
+    bottom: 45%;
+}
+
+.under_img_text span {
+    text-decoration: underline;
+}
+
+.under_img_text span:hover {
+    text-shadow: 0px 2px 0px #FF9B9B, 0px 4px 0px #2E2B43, 0px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 .header_slide {
@@ -571,6 +600,7 @@
 .section_header h1 {
     font-size: 48px;
     font-weight: 500;
+    text-shadow: 0px 4px 0px #FF9C9C, 0px 7px 0px #2E2B43;
 }
 
 .section_second_text {
@@ -610,6 +640,16 @@
     -webkit-text-fill-color: transparent;
     transition: all .2s;
     margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.roadmap_step_header.preheader h2 {
+    font-size: 25px;
+    color: #fff!important;
+    transition: none;
+    background-image: none;
+    -webkit-text-fill-color: #fff;
+    padding-bottom: 0px;
 }
 
 .roadmap_step_text {
@@ -719,14 +759,14 @@
 }
 
 .team_container {
-    width: 60%;
+    width: 65%;
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
 }
 
 .team_each {
-    width: 30%;
+    width: 23%;
     margin: 0 auto;
     padding-bottom: 30px;
     padding-top: 30px;
@@ -887,6 +927,7 @@
 .adaptive_menu {
     display: none;
 }
+
 @media screen and (max-width: 1600px) {
     .menu .right_part .right_part_img_block {
         height: 30px;
@@ -899,6 +940,10 @@
 
     .main_part {
         font-size: 15px;
+    }
+
+    .under_img_text {
+        font-size: 17px;
     }
 
     .section_second_text {
@@ -923,6 +968,10 @@
 
     .roadmap_step_header h2 {
         font-size: 30px;
+    }
+
+    .roadmap_step_header.preheader h2 {
+        font-size: 22px;
     }
 
     .roadmap_step_text {
@@ -951,6 +1000,12 @@
 }
 
 @media screen and (max-width: 1300px) {
+    .under_img_text {
+        font-size: 15px;
+        bottom: 46%;
+        right: -10%;
+    }
+
     .menu .right_part .right_part_img_block:first-child {
         margin-left: 10px;
         margin-right: 20px;
@@ -975,6 +1030,10 @@
 
     .roadmap_step_header h2 {
         font-size: 27px;
+    }
+
+    .roadmap_step_header.preheader h2 {
+        font-size: 20px;
     }
 
     .roadmap_step_text {
@@ -1069,6 +1128,16 @@
 }
 
 @media screen and (max-width: 500px) {
+
+    .under_img_text {
+        font-size: 9px;
+        line-height: 14px;
+        bottom: 52%;
+        right: 5%;
+        text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        transform: rotate(-5.53deg);
+    }
+
     .adaptive_menu {
         display: block;
     }
@@ -1127,6 +1196,7 @@
 
     .section_header h1 {
         font-size: 22px;
+        text-shadow: 0px 2px 0px #FF9B9B, 0px 4px 0px #2E2B43;
     }
 
     .section_second_text {
@@ -1144,6 +1214,11 @@
         font-size: 22px;
         line-height: 22px;
         margin-bottom: 15px;
+        padding-bottom: 15px;
+    }
+
+    .roadmap_step_header.preheader h2 {
+        font-size: 14px;
     }
 
     .roadmap_step_text {
